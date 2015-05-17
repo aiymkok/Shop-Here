@@ -1,0 +1,419 @@
+@red : 	#ff0000;
+@blue : #00a3ae;
+@sR: #418a95;
+@sRLight: #418a95 + #222;
+@sRDark: #418a95 - #222;
+@darkGrey:#6b6b6b;
+@offWhite:#f6f3f7;
+@bg:#f6f3f7 - #111;
+@darkBg:#f6f3f7 - #222;
+
+.border-radius(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.transition(@params) {
+	-webkit-transition: @params;
+    -o-transition: @params;
+    -moz-transition: @params;
+    transition: @params;
+}
+
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+a {
+	.transition(0.25s;);
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+
+
+body{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	
+	#mainPage {
+		width:100%;
+		height:100%;
+		overflow: hidden;
+		background: url('../img/fon.jpg') no-repeat center;
+		background-size: cover;
+		#mid_button {
+			position: relative;
+			width: 40vh;
+			height: 20vh;
+			margin: 39vh auto;
+			z-index: 10;
+			//background: url('../img/page3button.png') no-repeat center;
+			background-size: cover;
+			.ssilka {
+				width:100%;
+				height:97%;
+				display: inline-block;
+			}
+			#left_icon{
+				background: url('../img/users.png') no-repeat center;
+				background-size: cover;
+			}
+			#right_icon{
+				background: url('../img/user.png') no-repeat center;
+				background-size: cover;
+			}
+			#left_button {
+				width: 120%;
+				height: 100%;
+			}
+			#right_button {
+				width:120%;
+				height: 100%;
+				transform: skew(-19deg,0deg);
+			}
+			#helper {
+				position: absolute;
+				width:30%;
+				height:100%;
+				margin: -20vh 0 0 20vh;
+			}
+		}
+		#left_back {
+			position: absolute;
+			top:0; left:0;
+			width:100%;
+			height:100%;
+			background: url('../img/administratorpage.png') no-repeat center;
+			background-size: cover;
+			display: none;		
+		}
+		#right_back {
+			position: absolute;
+			top:0; left:0;
+			width:100%;
+			height:100%;
+			background: url('../img/employment_agreement.jpg') no-repeat center;
+			background-size: cover;
+			display: none;
+		}
+	}
+	#adminTable{
+		position:absolute;
+		width: 98%;
+		height: 95%;
+		.row{
+			width: 100%;
+			height: 45%; 
+			position:relative;
+			//border: 1px solid red;
+			.col-1{
+				width: 25%;
+				heiht: 50%;
+				position:relative;
+				//background-color:black;
+                background: url('../img/sinii.jpg') no-repeat center;
+				.adminList {
+					margin: 0 auto;
+				}
+				.adminList ul 
+				{ 
+					list-style:none; 
+					margin: 0 auto;
+					width:90%; 
+				}
+				
+				.adminList ul li 
+				{ 
+					font-family:'Showcard Gothic',serif,Times; 
+					font-size:18px;
+					padding: 17px;
+					cursor:pointer;
+					display:block; 
+					width:80%; 
+					background-color:#e22b2b; 
+					border-left:5px solid #b6ff00; 
+					border-right:5px solid #b6ff00; 
+					padding-left:30px;
+					text-decoration:none; 
+					color:#ffd800; 
+				}
+				.adminList ul li:hover 
+				{  
+				    //-moz-transform:rotate(-5deg); 
+				    //-moz-box-shadow:10px 10px 20px #000000;
+				    //-webkit-transform:rotate(-5deg); 
+				    //-webkit-box-shadow:10px 10px 20px #000000;
+				    //transform:rotate(-5deg); 
+				    //box-shadow:10px 10px 20px #000000; 
+				}
+				button{
+                    font-family:'Showcard Gothic',serif,Times;
+					color:#bfe1f1;
+					background-color:#333; 
+					cursor:pointer;
+				}
+			}
+	
+			.col-2{
+				border: 1px black solid; 
+				width: 75%;
+				height: 50%;
+				position:relative;
+				background:url("../img/sinii.jpg") no-repeat center;
+                background-color:#333;
+	
+				#registerForm
+				{	
+				  padding: 1% 1%;
+				  width:98%;
+				  height: 98%;
+				  font:13px Open Sans;
+				  color:#6E6E6E;
+				  text-shadow:#000 0px 1px 5px;  
+				  display:none;
+				}
+
+				h1
+				{
+				  font:3vh Oswald;
+				  color:white;
+				  text-transform:uppercase;
+				  text-shadow:#000 0px 1px 5px;
+				}
+
+				.form
+				{
+				 	width: 10vw;
+				 	margin: 0 auto;
+				}
+
+				input[type="text"],input[type="number"]
+				{
+				  	width:98%;
+				  	border-radius:5px;
+				  	box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+				 	background:rgba(0,0,0,0.2);
+				  	border:1px solid rgba(0,0,0,1);
+				  	margin-bottom: 5px;
+				  	text-align: center;
+				  	color:#6E6E6E;
+				  	text-shadow:#000 0px 1px 5px;
+				}
+
+				input[type="submit"]{
+					  width:100%;
+					  padding:25px;
+					  border-radius:125px;
+					  margin-top: 10px;
+					  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+					  background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  font:14px 'Showcard Gothic';
+					  color:#ffd800;
+					  text-transform:uppercase;
+					  text-shadow:#000 0px 1px 5px;
+					  border:1px solid #000;
+					  opacity:0.7;
+					  -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					  -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					  //border-top:1px solid rgba(255,255,255,0.8)!important;
+					  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+				}
+
+				input:focus{
+				  //color:#ff0000;
+                  box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+				  background:rgba(0,0,0,0.3);
+				  	
+				}
+
+				input[type="submit"]:hover{
+				  opacity:1;
+				  cursor:pointer;
+				}
+
+				#firstNameHelp, #lastNameHelp,#titleHelp,#phoneHelp,#transactionList{
+				  display:none;
+				  padding:0px;
+				  font-size: 11px;
+				}
+
+				.optimize{
+				  position:fixed;
+				  right:0%;
+				  top:0px;
+				}
+				#registerForm, #employeeList ,#editEmployeeData,#issueOrderTable,#transaction,#theBestEmployee{
+					display:none;
+				}
+				.column2content
+				{
+					float:top;
+					overflow-x: hidden;
+					overflow-y: auto;
+					width:100%;
+					padding: 5px 10px;
+					height: 100%;
+					position:relative;
+					text-align:center;
+					font-family:Lato;
+					table{
+						top: 5%;
+						border: thin;
+						border-collapse: collapse;
+						font-weight:bold;
+  						color:#b6ff00; 
+						width: 50%;
+						font-size: 1vw;
+						margin: 0 auto;
+						color: white;
+						border-style: solid;
+						position:relative;
+						text-align:left;
+						th{	
+							height: 3%;
+							//padding: 5px 5px;
+							border: 1px solid white;
+							color:#ffd800; 
+							background:#e22b2b;
+                            font-family:'Showcard Gothic',fantasy,Times;  
+							//border:0px solid;
+						}
+						tr{
+							background:@darkBg;
+							border: 1px solid white;
+							border-style: solid;
+    						border-bottom:rgba(0,0,0,.05) 1px solid;
+							float:center;	
+							color: black;
+							td{
+								padding: 5px 5px;
+								box-sizing:border-box;
+								border: 1px solid white;
+								height: 2%;
+								input[type="text"]
+								{								 
+								  	box-shadow:inset 0px 0px 0px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+								  	border:1px solid rgba(0,0,0,1); 
+								  	text-align: center;
+								  	color:white;
+								}	
+							}
+								
+						}
+					}
+					
+					#applyEdit,#orderButton{
+						padding:5px;
+					    border-radius:5px;
+					 	margin-top: 10px;
+					 	cursor:pointer;
+					 	margin-left: 65%;
+					 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+					 	background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					 	background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  	background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  	background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+					  	font:14px Oswald;
+					 	color:#ff0000;
+					 	text-transform:uppercase;
+					 	text-shadow:#000 0px 1px 5px;
+					 	border:1px solid #000;
+					 	opacity:0.7;
+					 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					 	-moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					 	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+					 	border-top:1px solid rgba(255,255,255,0.8)!important;
+					 	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+					}
+
+					.con{
+
+						label {
+						  width: 140px;
+						  border-radius: 3px;
+						  border: 1px solid #D1D3D4;
+						  display: inline-block;
+						}
+
+						/* hide input */
+						input.radio:empty {
+							display:none;
+						}
+
+						/* style label */
+						input.radio:empty ~ label {
+							position: relative;
+							float: left;
+							text-align:right;
+							margin-top: 4px;
+							margin-bottom: 8px;
+							cursor: pointer;
+							-webkit-user-select: none;
+							-moz-user-select: none;
+							-ms-user-select: none;
+							user-select: none;
+						}
+
+						input.radio:empty ~ label:before {
+							position: absolute;
+							display: block;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							content: '';
+							width: 2.5em;
+							background: #b6ff00;
+							border-radius: 3px 0 0 3px;
+						}
+
+						/* toggle hover */
+						input.radio:hover:not(:checked) ~ label:before {
+							content:'\2714';
+							text-indent: .9em;
+							color: #ff0000;
+						}
+
+						input.radio:hover:not(:checked) ~ label {
+							color: #888;
+						}
+
+						/* toggle on */
+						input.radio:checked ~ label:before {
+							content:'\2714';
+							text-indent: .9em;
+							color: #9CE2AE;
+							background-color: #4DCB6D;
+						}
+
+						input.radio:checked ~ label {
+							color: #777;
+						}
+
+						/* radio focus */
+						input.radio:focus ~ label:before {
+							box-shadow: 0 0 0 3px #999;
+						}
+					}			
+				}
+			}
+		}
+	}	
+}
